@@ -22,7 +22,8 @@
     <gap:platform name="android" />
 	
 	<gap:plugin name="de.appplant.cordova.plugin.background-mode"  />
-
+    <gap:plugin name="org.apache.cordova.device"/>
+    <gap:plugin name="de.appplant.cordova.plugin.local-notification" />
 
     <preference name="splash-screen-duration" value="5000"/> 
   <gap:splash src="splash.png" />
