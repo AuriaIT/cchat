@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.auria.it.cchat"
+        versionCode = "1" 
+        version     = "1.0.0" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>CChat</name>
+
+    <description>
+        clean chat | no more, no less
+    </description>
+
+    <author href="http://www.auria-it.de">
+        Luciano Auria
+    </author>
+
+    <icon src="icon.png" />
+
+    <gap:platform name="android" />
+	
+	<gap:plugin name="de.appplant.cordova.plugin.background-mode"  />
+
+
+    <preference name="splash-screen-duration" value="5000"/> 
+  <gap:splash src="splash.png" />
+</widget>
+
+
