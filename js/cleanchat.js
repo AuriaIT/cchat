@@ -31,7 +31,7 @@
 				dweetio.dweet_for(_dweet_name, {"the_message":new_message,"sender_id":_fingerprint}, function(err, dweet){});  
 			}   
 			
-			return true;
+			return false;
         }
         
         var _prependMessage = function (dweet) {
@@ -45,7 +45,9 @@
 					if ( dweet["content"]["sender_id"] == _fingerprint ) {
 						classstyle = "alert-success";
 					} else {
-						sendNotify("Neue Nachricht");
+						if ( window.plugin) {    
+							window.plugin.notification.local.add({ message: "Neue Nachricht" })
+						}		
 					}
 				
 					$(".message_container").prepend('<div style="font-size:10px;">'+ htmlspecialchars('@ ' + dweet["created"].toLocaleDateString("de-DE") + ' ' +dweet["created"].toLocaleTimeString("de-DE") + ' from ' + dweet["content"]["sender_id"]) +'</div><div class="alert '+classstyle+'" style="margin-top:2px;padding:5px;">' + htmlspecialchars(dweet["content"]["the_message"]) + '</div>');
@@ -67,8 +69,4 @@
          return str;
          }
 		 
-		function sendNotify(msg) {
-				if ( typeof window.plugin !== "undefined" ) {    
-					window.plugin.notification.local.add({ message: msg })
-				}
-		}		 
+			 
