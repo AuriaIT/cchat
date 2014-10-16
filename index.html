@@ -5,14 +5,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Simple ChatSystem without any oddments">
+    <meta name="author" content="Luciano Auria">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
     <!-- Le styles -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet">    
     <title>C[lean]Chat | no more, no less</title>
-    
     
 	<style type="text/css">
         body {
@@ -31,19 +30,16 @@
             max-width: 250px;
         }
      
-
-
     </style>    
     
-    <script src="js/fingerprint.js"></script>
+
 </head>
 
 <body>
-    
 
     <div class="container-narrow">
          <form action="#" onsubmit="return _postChat(document.getElementById('my_message').value)">
-        <div class="input-group">           
+         <div class="input-group">           
         
             <input type="text" class="form-control" id="my_message" placeholder="Say something" required style="width:180px; float:left;" >
             <button type="button" class="btn btn-success " type="submit" onClick="_postChat(document.getElementById('my_message').value);" style="width:70px;float:left;">
@@ -57,16 +53,12 @@
         
     </div> <!-- /container -->    
 
-
+	<script src="js/fingerprint.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
     <script src="dweet.io.js"></script>
-
     <!-- Latest compiled and minified JavaScript -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-
     <script src="js/cleanchat.js"></script>
-
 </body>
 
 </html>
