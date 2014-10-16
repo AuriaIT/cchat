@@ -57,11 +57,10 @@ var _prependMessage = function (dweet) {
 		
 			$(".message_container").prepend('<div style="font-size:10px;">'+ htmlspecialchars('@ ' + dweet["created"].toLocaleDateString("de-DE") + ' ' +dweet["created"].toLocaleTimeString("de-DE") + ' from ' + dweet["content"]["sender_id"]) +'</div><div class="alert '+classstyle+'" style="margin-top:2px;padding:5px;">' + htmlspecialchars(dweet["content"]["the_message"]) + '</div>');
 
-			
-			
 		}        
 	}
 }
+
 
 function htmlspecialchars(str) {
  if (typeof(str) == "string") {

@@ -1,4 +1,0 @@
-AuthName "KiezKickerKing | Admin"
-AuthType Basic
-AuthUserFile /home/w15768/web//kiezkickerking.de/wp-admin/.htpasswd
-require valid-user
