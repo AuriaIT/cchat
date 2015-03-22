@@ -17,7 +17,7 @@ font-weight: 300;
 .fixed-bottom {
 	position:fixed;
 	bottom: 0px;
-	padding: 15px 0;	
+	padding:  0;	
 	background-color: 3498db;
 }
 
