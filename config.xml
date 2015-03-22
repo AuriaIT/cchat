@@ -18,14 +18,16 @@
     </author>
 
     <icon src="icon.png" />
-
     <gap:platform name="android" />
-	
+    
+    <gap:plugin name="de.appplant.cordova.plugin.local-notification" />
 	<gap:plugin name="de.appplant.cordova.plugin.background-mode"  />
-
-
-    <preference name="splash-screen-duration" value="5000"/> 
-  <gap:splash src="splash.png" />
+	<gap:plugin name="org.apache.cordova.device"/>
+	
+	<feature name="Camera">
+		<param name="android-package" value="org.apache.cordova.CameraLauncher" />
+	</feature>
+	
 </widget>
 
 
