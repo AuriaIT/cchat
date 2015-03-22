@@ -1,0 +1,38 @@
+body {
+	padding-top: 20px;
+	padding-bottom: 40px;
+	background-color: #3498db;
+	color: white;
+	font-family: 'roboto',sans-serif;
+	font-size: 16px;
+font-weight: 300;            
+}
+
+/* Custom container */
+.container-narrow {
+	margin: 0 auto;
+	max-width: 250px;
+}
+
+.fixed-bottom {
+	position:fixed;
+	bottom: 0px;
+	padding: 15px 0;	
+	background-color: 3498db;
+}
+
+.fingerprint-info{
+	height:50px;
+	font-size:10px;
+	text-align:left;
+}
+
+.msg-box-info{
+	font-size:10px;
+}
+
+.msg-box {
+	margin-top:2px;
+	padding:5px;
+	word-wrap: break-word;
+}

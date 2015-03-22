@@ -1,12 +1,14 @@
 
         var _fingerprint = new Fingerprint().get();
         var _dweet_name = "auria_it.chat";
-        
-		/**
-		* Enables the background mode. The app will not pause while in background.
-		*/
-		if ( window.plugin ) {
-			window.plugin.backgroundMode.enable();
+  
+		function onDeviceReady() {
+			/**
+			* Enables the background mode. The app will not pause while in background.
+			*/
+			if ( window.plugin ) {
+				window.plugin.backgroundMode.enable();
+			}
 		}
 		
         $(".my_fingerprint").html(_fingerprint);
@@ -50,9 +52,9 @@
 						}		
 					}
 				
-					$(".message_container").prepend('<div style="font-size:10px;">'+ htmlspecialchars('@ ' + dweet["created"].toLocaleDateString("de-DE") + ' ' +dweet["created"].toLocaleTimeString("de-DE") + ' from ' + dweet["content"]["sender_id"]) +'</div><div class="alert '+classstyle+'" style="margin-top:2px;padding:5px;">' + htmlspecialchars(dweet["content"]["the_message"]) + '</div>');
+					$(".message_container").before('<div class="msg-box-info" >'+ htmlspecialchars('@ ' + dweet["created"].toLocaleDateString("de-DE") + ' ' +dweet["created"].toLocaleTimeString("de-DE") + ' from ' + dweet["content"]["sender_id"]) +'</div><div class="alert '+classstyle+' msg-box" >' + htmlspecialchars(dweet["content"]["the_message"]) + '</div>');
 
-					
+					$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 					
 				}        
 			}
@@ -69,4 +71,4 @@
          return str;
          }
 		 
-			 
+	 
